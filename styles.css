@@ -1,0 +1,35 @@
+h1{
+    display: flex;
+    justify-content: center;
+    font-size: 50px;
+}
+.formsWrapper{
+   display: grid;
+   justify-content: center;
+
+}
+.innerWrapper{
+    padding: 10px;
+    margin: 10px;
+    background:linear-gradient(to bottom Right, grey, black);
+    color:whitesmoke;
+   
+    
+}
+.forms{
+   font-size: 35px;
+    
+}
+
+.input{
+    height: 20px;
+    border-radius: 7px;
+    padding: 5px;
+    text-align: center;
+}
+.submit:hover{
+    background:linear-gradient(to bottom Right, blue, pink );
+    font-size: xx-large;
+    position: fixed;
+    top:0;
+}
