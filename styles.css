@@ -33,13 +33,16 @@ h1{
  width: 100px;
  height: 30px;
  border-radius: 20px;
+ box-shadow: 2px 2px 2px black;
+ 
 }
 .submit:hover{
-    box-shadow: 2px 2px 2px black;
+    
     background-color: rgb(124, 123, 123);
     cursor: pointer;
 }
 .submit:active{
+    box-shadow: inset 2px 2px 2px black;
     
 
 }
