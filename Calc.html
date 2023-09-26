@@ -1,6 +1,8 @@
 <!DOCTYPE html>
     <html>
         <head>
+            <meta charset="UTF-8">
+            <script src="Counting.js"> </script>
             <link rel="stylesheet" href="styles.css">
             <title>Salary Calculator</title>
         </head>
@@ -9,27 +11,27 @@
             <form class="formsWrapper" action="runExe.php" method="post">
                 <div class="innerWrapper">
                     <div class="forms">
-                        <label for="income">Hourly Income:</label><br>
+                        <label for="income">Lön / Timme:</label><br>
                         <input class="input" type="text" id="income" name="income"><br>
                     </div>
                      <div class="forms">
-                        <label for="hour">Hours that i've worked:</label><br>
+                        <label for="hour">Timmar / månad:</label><br>
                         <input class="input" type="text" id="hour" name="hour"><br>
                     </div>
                     <div class="forms">
-                        <label for="shift">Hours per shift:</label><br>
+                        <label for="shift">Timmar / pass:</label><br>
                         <input class="input" type="text" id="shift" name="shift">
                     </div>
                     <div class="forms">
-                        <label for="ovetime">Overtime bonus in %:</label><br>
+                        <label for="ovetime">Övertidstillägg i %:</label><br>
                         <input class="input" type="text" id="overtime" name="overtime"><br>
                     </div>
                     <div class="forms">
-                        <label for="tax">Taxes in %:</label><br>
+                        <label for="tax">Skatt i %:</label><br>
                         <input class="input" type="text" id="tax" name="tax">
                     </div>
                     <div class="forms">
-                        <input class="submit" type="submit">
+                        <input class="submit" type="submit" value="Uträkna">
                         <h2>by Zeeptech</h2>
                     </div>
                 </div>
@@ -47,21 +49,7 @@
             const shift = document.getElementById("shift").value;
             const overtime = document.getElementById("overtime").value;
             const tax = document.getElementById("tax").value;
-            const formData = {
-                income:income,
-                hour:hour,
-                shift:shift,
-                overtime:overtime,
-                tax:tax
-            };
-
-            fetch("runExe.php", {
-                method:"POST", 
-                body:JSON.stringify(formData)
-            })
-            .then(response => response.json())
-            .then(data => {
-                alert(data.output)
-            });
+            
+            main(income, hour, shift, overtime, tax);
         } ); 
     </script> 
